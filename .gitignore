@@ -1,0 +1,11 @@
+# Mac Specific
+.DS_Store
+
+# modules
+client/node_modules
+server/node_modules
+
+# client specific
+
+# server specific
+server/config.js
