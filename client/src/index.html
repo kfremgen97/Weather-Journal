@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+
+<head>
+    <!-- page info -->
+    <meta charset="UT-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>The Weather Journal</title>
+    <!-- style sheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<!-- body -->
+
+<body class="body">
+    <!-- header-->
+    <header class="header">
+        <h1 class="heading heading--1">The Weather Journal</h1>
+        <svg class="logo">
+            <use href="./assets/sprites/fa-regular.svg#cloud"></use>
+        </svg>
+    </header>
+    <!-- main -->
+    <main class="main">
+        <!-- form section -->
+        <section class="journal-form">
+            <form class="form">
+                <label class="form__label" for="zip">Zip Code:</label>
+                <input class="form__input form__input--zip" id="zip" type="text" required>
+                <label class="form__label" for="feelings">Feelings:</label>
+                <input class="form__input form__input--feelings" id="feelings" type="text" required>
+                <button class="button button--form">Submit</button>
+            </form>
+
+        </section>
+        <!-- entry sections -->
+        <section class="journal-entries">
+            <article class="entry">
+                <div class="entry__temp">
+                    <span class="entry__label">Temp:</span>
+                    <p class="entry__content">75 degrees</p>
+                </div>
+                <div class="entry__date">
+                    <span class="entry__label">Date:</span>
+                    <p class="entry__content">07/12/2021</p>
+                </div>
+                <div class="entry__feelings">
+                    <span class="entry__label">Feelings:</span>
+                    <p class="entry__content">75 degrees</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+</body>
+
+</html>
