@@ -7,8 +7,8 @@ class Journal {
         this.#projectData = {};
     }
 
-    addEntry(entry) {
-        this.#projectData[entry.date] = entry;
+    addEntry(entryID,entry) {
+        this.#projectData[entryID] = {id: entryID, ...entry};
     }
 
     getEntries() {

@@ -2,11 +2,12 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const { v4: uuidv4 } = require('uuid');
 const config = require('./config');
 const Journal = require('./models/journal');
 
 // Initalize projectData
-const projectData = new Journal();
+const journal = new Journal();
 // Initialize express app
 const app = express();
 
@@ -29,7 +30,16 @@ app.get('/', (req, res) => {
 // Get journal entries
 app.get('/journal', (req, res) => {
     // Send back all the jounral entries
-    res.send(JSON.stringify(projectData.getEntries()));
+    res.json(journal.getEntries());
+});
+
+// Add a new entry
+app.post('/journal', (req, res) => {
+    console.log(req.body);
+    // Add the data to the jounral
+    journal.addEntry(uuidv4(), req.body);
+    // Send a sucess
+    res.status(200).json({ status: 'OK', message: 'Journal entry added' });
 });
 
 // Start the server
