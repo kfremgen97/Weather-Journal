@@ -16,4 +16,5 @@ class Journal {
     }
 }
 
-module.exports = Journal;
+// Export an instance of the Journal
+module.exports = new Journal();
