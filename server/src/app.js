@@ -3,7 +3,10 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const config = require('./config');
+const Journal = require('./models/journal');
 
+// Initalize projectData
+const projectData = new Journal();
 // Initialize express app
 const app = express();
 
@@ -20,7 +23,13 @@ app.use(cors());
 
 // Simple get
 app.get('/', (req, res) => {
-    res.send('Welcome to the express server');
+    res.send('Welcome to the weather jounral');
+});
+
+// Get journal entries
+app.get('/journal', (req, res) => {
+    // Send back all the jounral entries
+    res.send(JSON.stringify(projectData.getEntries()));
 });
 
 // Start the server
