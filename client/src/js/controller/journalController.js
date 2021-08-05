@@ -1,3 +1,6 @@
+// Imports
+import { getWeather } from '../service/weatherService.js';
+
 // Elements
 const form = document.querySelector('.form');
 const zipInput = document.querySelector('.form__input--zip');
@@ -14,7 +17,16 @@ form.addEventListener('submit', function (event) {
     const formData = new FormData(this);
     // Add the current date to the form data
     formData.append('date', new Date());
-    // Create an object from the form data
-    const journalEntry = Object.fromEntries(formData.entries());
-    console.log(journalEntry);
+    // Get the current weather based on the zip code
+    getWeather(formData.get('zip'))
+        .then((data) => {
+            // Add the temperature to the formData
+            formData.append('temp', data.main.temp);
+            // Create an object from the form data
+            const journalEntry = Object.fromEntries(formData.entries());
+            console.log(journalEntry);
+        }).catch((error) => {
+            // Present alert
+            alert(error.message);
+        });
 });
