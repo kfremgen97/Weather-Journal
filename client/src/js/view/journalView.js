@@ -1,0 +1,5 @@
+// Journal View
+class JournalView{
+    
+
+}
