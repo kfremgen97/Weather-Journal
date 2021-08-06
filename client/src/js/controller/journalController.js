@@ -7,7 +7,7 @@ const form = document.querySelector('.form');
 const zipInput = document.querySelector('.form__input--zip');
 const feelingsInput = document.querySelector('.form__input--feelings');
 const formButton = document.querySelector('.button--form');
-const jounralEntries = document.querySelector('.journal-entries');
+const journalEntries = document.querySelector('.journal-entries');
 
 // Add event listener for form submit
 form.addEventListener('submit', function (event) {
@@ -40,6 +40,36 @@ form.addEventListener('submit', function (event) {
         })
         .then((entries) => {
             console.log(entries);
+            let entryString = '';
+            
+            Object.values(entries).forEach((entry) => {
+                console.log(entry);
+                // Get the date of the entry
+                const date = new Date(entry.date);
+                entryString += `
+                <article class="entry">
+                <div class="entry__temp">
+                    <span class="entry__label">Temp:</span>
+                    <p class="entry__content">${entry.temp}</p>
+                </div>
+                <div class="entry__date">
+                    <span class="entry__label">Date:</span>
+                    <p class="entry__content">${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}</p>
+                </div>
+                <div class="entry__feelings">
+                    <span class="entry__label">Feelings:</span>
+                    <p class="entry__content">${entry.feelings}</p>
+                </div>
+            </article>
+                `;
+            });
+            // Reset text fields
+            zipInput.value = '';
+            feelingsInput.value = '';
+            // Reset jounral entries
+            journalEntries.innerHTML = '';
+            // Update journal entries
+            journalEntries.insertAdjacentHTML('afterbegin', entryString);
         })
         .catch((error) => {
             // Present alert
