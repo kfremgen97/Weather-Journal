@@ -35,6 +35,11 @@ form.addEventListener('submit', function (event) {
         })
         .then((postData) => {
             console.log(postData);
+            // Get the entries and return the promise to be sent down chain
+            return journalService.getEntries();
+        })
+        .then((entries) => {
+            console.log(entries);
         })
         .catch((error) => {
             // Present alert

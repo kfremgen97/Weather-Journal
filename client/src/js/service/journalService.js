@@ -13,12 +13,31 @@ export const addEntry = function (entry) {
         body: JSON.stringify(entry),
     })
         .then((response) => {
-            if (!response.ok) throw new Error('Unable to add entry');
+            if (!response.ok) throw new Error('Unable to add jounral entry');
             return response.json();
         }).then((data) => {
             console.log(data);
             return data;
         }).catch((error) => {
+            console.error(error);
+            throw error;
+        });
+};
+
+// Get entries
+export const getEntries = function() {
+    const url = resourceConstants.JOUNRAL_API;
+
+    return fetch(url)
+        .then((response) => {
+            if (!response.ok) throw new Error('Unable to get journal entries');
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data);
+            return data;
+        })
+        .catch((error) => {
             console.error(error);
             throw error;
         });
