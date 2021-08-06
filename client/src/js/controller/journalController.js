@@ -1,5 +1,6 @@
 // Imports
 import { getWeather } from '../service/weatherService.js';
+import * as journalService from '../service/journalService.js';
 
 // Elements
 const form = document.querySelector('.form');
@@ -25,7 +26,17 @@ form.addEventListener('submit', function (event) {
             // Create an object from the form data
             const journalEntry = Object.fromEntries(formData.entries());
             console.log(journalEntry);
-        }).catch((error) => {
+            // Return the entry for when promise is resolved to be sent down the promise chain
+            return journalEntry;
+        })
+        .then((entry) => {
+            // Add the entry and return the promise to be sent down chain
+            return journalService.addEntry(entry);
+        })
+        .then((postData) => {
+            console.log(postData);
+        })
+        .catch((error) => {
             // Present alert
             alert(error.message);
         });
