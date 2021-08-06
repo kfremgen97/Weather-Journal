@@ -8,7 +8,8 @@ export const addEntry = function (entry) {
 
     return fetch(url, {
         method: 'POST',
-        header: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(entry),
     })
         .then((response) => {
