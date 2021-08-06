@@ -3,6 +3,7 @@ import * as config from '../../config.js';
 import * as resourceConstants from './resourceConstants.js';
 
 export const getWeather = function (zip) {
+    console.log(zip);
     const url = `${resourceConstants.OPEN_WEATHER_API}?zip=${zip}&units=imperial&appid=${config.OPEN_WEATHER_KEY}`
     return fetch(url)
         .then((response) => {
