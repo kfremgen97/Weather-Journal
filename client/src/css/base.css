@@ -1,0 +1,46 @@
+/***** Variables *****/
+
+:root{
+    /*store the color variables*/
+    --color-primary: #7048e8;
+    --color-primary-light: #845ef7;
+    --color-primary-dark: #5f3dc4;
+    --color-secondary: #f76707;
+    --color-secondary-light: #ff922b;
+    --color-secondary-dark: #d9480f;
+    --color-grey-light: #f8f9fa;
+    --color-grey-dark: #343a40;
+}
+
+/***** All elements *****/
+
+*,
+*::before,
+*::after{
+    /*set all elements amrgin and padding to 0
+    set the box sizing to inherit*/
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/***** Root element *****/
+
+html{
+    /*set the font size to 10px, 62.5% of default font size of 16 = 10
+    set the box sizing to border-box, 
+        this will make all elemnts inherit this as specified by root*/
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+/***** Body element ******/
+
+body{
+    /*set the overall typography*/
+    color: var(--color-grey-dark);
+    font-family: 'Noto Sans JP',sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
