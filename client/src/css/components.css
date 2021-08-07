@@ -5,3 +5,88 @@
     width: 4rem;
     fill: var(--color-primary);
 }
+
+/***** form ******/
+
+.form {
+    /*create a 2x2 grid with a 2rem vertical and 1rem horizontal gap
+    justify the items in the center horizontally
+    align the items int he center vertically*/
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,min-content);
+    grid-gap: 2rem 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+/** form input **/
+
+.form__input {
+    /*set the font size to inherit
+    set the width to 100% of parent
+    add a padding of .5rem vertically and 1 rem horizontally
+    add a .1rem solid border along with a border radius of 2rem
+    remove the outline
+    set the transition for all proeprties to .2 seconds*/
+    font-size: inherit;
+    width: 100%;
+    padding: .5rem 1rem;
+    border: .1rem solid var(--color-grey-dark);
+    border-radius: 2rem;
+    outline: none;
+    transition: all .2s;
+}
+
+.form__input:focus:valid {
+    /*set the box shadow to have a spread radius of .2rem with the primary light color*/
+    box-shadow: 0 0 0 .2rem var(--color-primary);
+}
+
+.form__input:focus:invalid {
+    /*set the box shadow to have a spread radius of .2rem with the primary light color*/
+    box-shadow: 0 0 0 .2rem var(--color-secondary);
+}
+
+/***** button *****/
+
+.button{
+    /*set the font size to inherit
+    set the width to 100% of parent
+    add a padding of .5rem vertically and 1 rem horizontally
+    add a .1rem solid border along with a border radius of 2rem
+    remove the outline
+    set the transition for all proeprties to .2 seconds*/
+    font-size: inherit;
+    width: min-content;
+    color: var(--color-grey-light);
+    background-color: var(--color-primary);
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    transition: all .2s;
+}
+
+.button:hover,
+.button:active {
+    /*set the background color upon hover and active*/
+    background-color: var(--color-primary-dark);
+}
+
+.button:active {
+    /*scale the button down to 90% upon activation*/
+    transform: scale(.90);
+}
+
+.button:focus {
+    /*set the box shadow to have a spread radius of .2rem with the primary light color*/
+    box-shadow: 0 0 0 .2rem var(--color-primary-light);
+}
+
+/** button form **/
+.button--form {
+    /* set the grid position*/
+    grid-row: -2/-1;
+    grid-column: 1/-1;
+}

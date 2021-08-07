@@ -1,6 +1,9 @@
 /***** body class *****/
 
 .body {
+    /*set the background image*/
+    background-image: linear-gradient(rgba(248,249,259,.85),rgba(248,249,259,.85)) ,
+                        url('../assets/img/clouds.jpg');
     /*4x4 grid*/
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -32,9 +35,10 @@
 .main {
     /*set the grid position*/
     grid-area: main;
+    padding: 2rem;
     /*set the display to grid*/
     display: grid;
-    grid-template-columns: repeat(2,min-content);
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,min-content);
 }
 
