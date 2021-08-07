@@ -16,7 +16,15 @@
 .header {
     /*set the grid position*/
    grid-area: header;
-
+    /*set the padding to 2rem
+    set the element to a display of flex with a direction of row
+    justify the content to the start along the main axis 
+    align the items in the center along the cross axis*/
+   padding: 2rem;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
 }
 
 /***** main class ******/
