@@ -32,6 +32,10 @@
 .main {
     /*set the grid position*/
     grid-area: main;
+    /*set the display to grid*/
+    display: grid;
+    grid-template-columns: repeat(2,min-content);
+    grid-template-rows: repeat(2,min-content);
 }
 
 /***** footer class *****/
