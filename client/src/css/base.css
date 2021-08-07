@@ -1,6 +1,6 @@
 /***** Variables *****/
 
-:root{
+:root {
     /*store the color variables*/
     --color-primary: #7048e8;
     --color-primary-light: #845ef7;
@@ -16,7 +16,7 @@
 
 *,
 *::before,
-*::after{
+*::after {
     /*set all elements amrgin and padding to 0
     set the box sizing to inherit*/
     margin: 0;
@@ -26,7 +26,7 @@
 
 /***** Root element *****/
 
-html{
+html {
     /*set the font size to 10px, 62.5% of default font size of 16 = 10
     set the box sizing to border-box, 
         this will make all elemnts inherit this as specified by root*/
@@ -36,7 +36,7 @@ html{
 
 /***** Body element ******/
 
-body{
+body {
     /*set the overall typography*/
     color: var(--color-grey-dark);
     font-family: 'Noto Sans JP',sans-serif;
