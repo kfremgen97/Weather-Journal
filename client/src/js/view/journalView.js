@@ -17,36 +17,44 @@ class JournalView {
     }
 
     _updateEntries(entries) {
-        // Hold the entry string
-        let entryString = '';
+       
+        // document fragment
+        const docFragment = document.createDocumentFragment();
 
-        entries.forEach((entry) => {
+        entries.forEach((entry,index) => {
             // Get the date of the entry
             const date = new Date(entry.date);
+            // get the color class
+            const colorClass = index % 2 === 0 ? 'entry__item--primary' : 'entry__item--secondary';
 
+            // Create a list item
+            const listItem = document.createElement('li');
+            listItem.classList.add('entry__item', colorClass);
+        
             // Generate the html string for each entry
-            entryString += `
-        <article class="entry">
-        <div class="entry__temp">
-            <span class="entry__label">Temp:</span>
-            <p class="entry__content">${entry.temp}</p>
-        </div>
-        <div class="entry__date">
+            const entryString = `
             <span class="entry__label">Date:</span>
-            <p class="entry__content">${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}</p>
-        </div>
-        <div class="entry__feelings">
-            <span class="entry__label">Feelings:</span>
-            <p class="entry__content">${entry.feelings}</p>
-        </div>
-    </article>
-        `;
+            <p class="entry__content entry__content--date">${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}</p>
+
+            <span class="entry__label">Zip code:</span>
+            <p class="entry__content entry__content--zip">${entry.zip}</p>
+
+            <p class="entry__content entry__content--temp">${entry.temp}</p>
+
+            <p class="entry__content entry__content--feelings">${entry.feelings}</p>
+            `;
+
+            // Set the lsitItem inner html
+            listItem.innerHTML = entryString;
+
+            // Add the list as the first child
+            docFragment.prepend(listItem);
         });
 
         // Reset jounral entries
         this.journalEntries.innerHTML = '';
-        // Update journal entries
-        this.journalEntries.insertAdjacentHTML('afterbegin', entryString);
+        // Update journal entries with document fragment
+        this.journalEntries.appendChild(docFragment);
     }
 
     // Update UI
