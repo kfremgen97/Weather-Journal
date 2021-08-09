@@ -153,3 +153,33 @@
       grid-column: 1/-1;
       grid-row: -2/-1;
 }
+
+/*********** Media quiries *********/
+
+/***** 400 breakpoint ****/
+
+@media screen and (max-width: 25em) {
+
+/*entry item */
+
+.entry__item {
+    /*update to a 4 x 4 grid*/
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: repeat(4,min-content);
+}
+
+.entry__content--temp {
+    /*set the position
+    justify the text to be centered along the horizontal axis*/
+    grid-column: 1/-1;
+    grid-row: 3/4;
+
+}
+
+.entry__content--feelings {
+      /*set the position*/
+      grid-column: 1/-1;
+      grid-row: 4/-1;
+}
+
+}

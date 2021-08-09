@@ -59,8 +59,10 @@ body {
     
 }
 
+/***** 600 breakpoint ****/
+
 @media screen and (max-width: 37.5em) {
-    
+
     /*html*/
     html {
         font-size: 50%;
