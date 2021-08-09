@@ -7,10 +7,11 @@
     /*4x4 grid*/
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(4,min-content);
+    grid-template-rows: repeat(3,min-content) 1fr min-content;
     grid-template-areas: 'header header header header'
                         'main main main main'
                         'main main main main'
+                        'blank blank blank blank'
                         'footer footer footer footer';
 }
 
@@ -47,5 +48,6 @@
 .footer {
     /*set the grid position*/
     grid-area: footer;
+    padding: 2rem;
 
 }
