@@ -13,11 +13,12 @@
     justify the items in the center horizontally
     align the items int he center vertically*/
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,min-content);
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
     grid-gap: 2rem 1rem;
-    justify-items: center;
+    justify-items: start;
     align-items: center;
+
 }
 
 /** form input **/
@@ -30,12 +31,15 @@
     remove the outline
     set the transition for all proeprties to .2 seconds*/
     font-size: inherit;
+    min-width: 25rem;
     width: 100%;
-    padding: .5rem 1rem;
+    padding: 1rem 2rem;
     border: .1rem solid var(--color-grey-dark);
     border-radius: 2rem;
     outline: none;
     transition: all .2s;
+     /* set the grid position*/
+     grid-column: 1/-1;
 }
 
 .form__input:focus:valid {
@@ -46,6 +50,12 @@
 .form__input:focus:invalid {
     /*set the box shadow to have a spread radius of .2rem with the primary light color*/
     box-shadow: 0 0 0 .2rem var(--color-secondary);
+}
+
+.form__label {
+    color: var(--color-primary);
+    /* set the grid position*/
+    grid-column: 1/-1;
 }
 
 /***** button *****/
@@ -87,6 +97,6 @@
 /** button form **/
 .button--form {
     /* set the grid position*/
-    grid-row: -2/-1;
     grid-column: 1/-1;
+    justify-self: center;
 }
