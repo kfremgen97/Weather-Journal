@@ -1,14 +1,14 @@
 // Journal model
-class Journal{
+class Journal {
     // Private entries field
     #entries = {};
 
-    setEntries(entries){
+    setEntries(entries) {
         // Replace the entries
         this.#entries = entries;
     }
 
-    getEntries(){
+    getEntries() {
         // Return an array of the entry keys
         return Object.values(this.#entries);
     }

@@ -23,3 +23,17 @@
 .mb--big {
     margin-bottom: 4rem;
 }
+
+
+/***** Key frames *****/
+
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }

@@ -154,6 +154,21 @@
       grid-row: -2/-1;
 }
 
+/***** spinner *****/
+
+
+.spinner {
+    margin: 5rem auto;
+    text-align: center;
+}
+   
+ .spinner__logo {
+      height: 6rem;
+      width: 6rem;
+      fill: var(--color-primary);
+      animation: rotate 2s infinite linear;
+  }
+
 /*********** Media quiries *********/
 
 /***** 400 breakpoint ****/

@@ -5,7 +5,10 @@ import journal from '../model/journal.js';
 import journalView from '../view/journalView.js';
 
 // Add event listener for form submit
-const formHandler = function (formData){
+const formHandler = function (formData) {
+
+    // Present spinner
+    journalView.presentSpinner();
 
     // Get the current weather based on the zip code
     getWeather(formData.get('zip'))
@@ -33,7 +36,7 @@ const formHandler = function (formData){
         })
         .catch((error) => {
             // Present alert
-            alert(error.message);
+            journalView.presentAlert();
         });
 };
 

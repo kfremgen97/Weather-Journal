@@ -17,11 +17,11 @@ class JournalView {
     }
 
     _updateEntries(entries) {
-       
+
         // document fragment
         const docFragment = document.createDocumentFragment();
 
-        entries.forEach((entry,index) => {
+        entries.forEach((entry, index) => {
             // Get the date of the entry
             const date = new Date(entry.date);
             // Get the temp
@@ -32,7 +32,7 @@ class JournalView {
             // Create a list item
             const listItem = document.createElement('li');
             listItem.classList.add('entry__item', colorClass);
-        
+
             // Generate the html string for each entry
             const entryString = `
             <span class="entry__label">Date:</span>
@@ -65,8 +65,34 @@ class JournalView {
         this._updateEntries(entries)
     }
 
+
+    // Show spinner on view
+    presentSpinner() {
+        // generate mark up
+        const markup = `
+     <div class="spinner">
+          <svg class="spinner__logo">
+            <use href="./assets/sprite/fa-regular.svg#circle-notch"></use>
+          </svg>
+        </div>
+    `;
+
+        // The Element property innerHTML gets or sets the HTML or XML markup contained within the element.
+        // We set it to an empty string to clear it
+        this.journalEntries.innerHTML = '';
+
+        /*
+        The insertAdjacentHTML() method of the Element interface parses the specified text as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position.
+        On the parent html element we use the insertAdjacentHTML() element to insert the html in the position afterbegin which adds it as the first child element.
+         */
+        this.journalEntries.insertAdjacentHTML('afterbegin', markup);
+    }
+
     // Present an alert
     presentAlert(message) {
+        // Clear the journal entries
+        this.journalEntries.innerHTML = '';
+        // Show the error
         alert(message);
     }
 
