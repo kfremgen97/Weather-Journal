@@ -13,7 +13,7 @@ export const addEntry = function (entry) {
         body: JSON.stringify(entry),
     })
         .then((response) => {
-            if (!response.ok) throw new Error('Unable to add jounral entry');
+            if (!response.ok) throw new Error('Unable to add journal entry');
             return response.json();
         }).then((data) => {
             console.log(data);
