@@ -45,3 +45,24 @@ body {
     line-height: 1.6;
     min-height: 100vh;
 }
+
+/*********** Media quiries *********/
+
+/***** 900 breakpoint ******/
+
+@media screen and (max-width: 56.25em) {
+
+    /*html*/
+    html {
+        font-size: 75%;
+    }
+    
+}
+
+@media screen and (max-width: 37.5em) {
+    
+    /*html*/
+    html {
+        font-size: 50%;
+    }
+}
