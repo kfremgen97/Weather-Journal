@@ -24,6 +24,8 @@ class JournalView {
         entries.forEach((entry,index) => {
             // Get the date of the entry
             const date = new Date(entry.date);
+            // Get the temp
+            const temp = Math.trunc(Number(entry.temp));
             // get the color class
             const colorClass = index % 2 === 0 ? 'entry__item--primary' : 'entry__item--secondary';
 
@@ -39,7 +41,7 @@ class JournalView {
             <span class="entry__label">Zip code:</span>
             <p class="entry__content entry__content--zip">${entry.zip}</p>
 
-            <p class="entry__content entry__content--temp">${entry.temp}</p>
+            <p class="entry__content entry__content--temp">${temp}℉</p>
 
             <p class="entry__content entry__content--feelings">${entry.feelings}</p>
             `;
