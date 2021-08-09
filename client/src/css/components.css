@@ -100,3 +100,56 @@
     grid-column: 1/-1;
     justify-self: center;
 }
+
+/***** entry list *****/
+
+.entry__list {
+    list-style: none;
+}
+
+/** entry item **/
+
+.entry__item {
+    /*create a 3x3 grid with a gap of 1rem vertical and 2rem horizontal*/
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-rows: repeat(3,min-content);
+    grid-gap: 1rem 2rem;
+    /*set the background color 
+    add passing and a border radius*/
+    background-color: var(--color-grey-light);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.entry__item--primary {
+    border-left: .2rem solid var(--color-primary);
+}
+
+.entry__item--secondary {
+    border-left: .2rem solid var(--color-secondary);
+}
+.entry__item:not(:last-of-type){
+    margin-bottom: 2rem;
+}
+
+.entry__label {
+    color: var(--color-primary);
+}
+
+.entry__content--temp {
+    /*set the font-size*/
+    font-size: 3rem;
+    /*set the position
+    justify the text to be centered along the horizontal axis*/
+    grid-column: -2/-1;
+    grid-row: 1/-1;
+    justify-self: center;
+
+}
+
+.entry__content--feelings {
+      /*set the position*/
+      grid-column: 1/-1;
+      grid-row: -2/-1;
+}

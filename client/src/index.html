@@ -28,7 +28,7 @@
     <!-- main -->
     <main class="main">
         <!-- form section -->
-        <section class="journal-form">
+        <section class="journal-form mb--big">
             <form class="form">
                 <label class="form__label" for="zip">Zip Code:</label>
                 <input class="form__input form__input--zip" id="zip" name="zip"  type="text" placeholder="Enter zip code..."  minlength="5" maxlength="5" required>
@@ -40,21 +40,34 @@
         </section>
         <!-- entry sections -->
         <section class="journal-entries">
-            <article class="entry">
-                <div class="entry__temp">
-                    <span class="entry__label">Temp:</span>
-                    <p class="entry__content">75 degrees</p>
-                </div>
-                <div class="entry__date">
+            <ul class="entry__list">
+            <li class="entry__item entry__item--primary">
+            
                     <span class="entry__label">Date:</span>
-                    <p class="entry__content">07/12/2021</p>
-                </div>
-                <div class="entry__feelings">
-                    <span class="entry__label">Feelings:</span>
-                    <p class="entry__content">75 degrees</p>
-                </div>
-            </article>
+                    <p class="entry__content entry__content--date">07/12/2021</p>
+ 
+                    <span class="entry__label">Zip code:</span>
+                    <p class="entry__content entry__content--zip">07/12/2021</p>
+ 
+                    <p class="entry__content entry__content--temp">75 degrees</p>
+      
+                    <p class="entry__content entry__content--feelings">75 degrees is perfect</p>
+     
+            </li>
+            <li class="entry__item entry__item--secondary">
+            
+                <span class="entry__label">Date:</span>
+                <p class="entry__content entry__content--date">07/12/2021</p>
 
+                <span class="entry__label">Zip code:</span>
+                <p class="entry__content entry__content--zip">07/12/2021</p>
+
+                <p class="entry__content entry__content--temp">75 degrees</p>
+  
+                <p class="entry__content entry__content--feelings">75 degrees is perfect</p>
+ 
+        </li>
+            </ul>
         </section>
     </main>
 
