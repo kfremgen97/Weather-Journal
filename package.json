@@ -8,10 +8,6 @@
     "lint-client": "eslint client",
     "lint-server": "eslint server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kfremgen97/Weather-Journal.git"
-  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
