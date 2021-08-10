@@ -7,19 +7,18 @@ This project uses an express server to create a local back end for handling data
 
 #### Getting project running
 
+This project is split based on the client and server side.
+
 To run the server side of the project, you will need node js installed and the following packages listed below.
 From the root project type the command **node server/src/app.js**
 
 To run the client side of the project, a server is needed such as live-server. The client side entry point is **client/src/index.html**.
-- If using vscode, the live server extension will work fine. Navigate to the client entry point as stated above and then click the go live button at the bottom of the vscode window.
+- If using vscode, the live-server extension will work fine. Navigate to the client entry point as stated above and then click the go live button at the bottom of the vscode window.
+- If using live-server package from npm, make sure live-server is installed globally then navigate to project directory **client/src** then run the command **live-server**.
 
-Packages used on server side:
+Packages used:
 - express
 - body-parser
 - cors
 - uuid
 - eslint
-
-Packages used on client side:
-- eslint
-
