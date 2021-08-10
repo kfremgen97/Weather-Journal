@@ -6,7 +6,6 @@ import journalView from '../view/journalView.js';
 
 // Add event listener for form submit
 const formHandler = async function (formData) {
-
     // Present spinner
     journalView.presentSpinner();
 

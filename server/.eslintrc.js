@@ -12,6 +12,7 @@ module.exports = {
   },
   rules: {
     'no-console': 'off',
-    'indent' : ['error' , 4],
+    indent: ['error' , 4],
   },
+  root: true,
 };

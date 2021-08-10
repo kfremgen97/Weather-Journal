@@ -2,8 +2,7 @@
 .DS_Store
 
 # modules
-client/node_modules
-server/node_modules
+node_modules
 
 # client specific
 # client/src/config.js
