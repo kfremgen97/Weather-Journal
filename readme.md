@@ -7,16 +7,12 @@ This project uses an express server to create a local back end for handling data
 
 #### Getting project running
 
-To run the server side of the project, you will need node js installed and the following packages listed below.
+To run the project, you will need node js installed and the following packages listed below.
 From the root project type the command **node server/src/app.js**
 
-Packages used on server side:
+Packages used:
 - express
 - body-parser
 - cors
 - uuid
 - eslint
-
-Packages used on client side:
-- eslint
-
