@@ -19,10 +19,8 @@ app.use(bodyParser.json());
 // Allow cross origin sharing
 app.use(cors());
 
-// Simple get
-app.get('/', (req, res) => {
-    res.send('Welcome to the weather jounral');
-});
+// Host static file
+app.use(express.static('client/src'));
 
 // Add the jounral router
 app.use('/api/journal', jounralRoutes);
