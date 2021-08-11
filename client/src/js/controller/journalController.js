@@ -27,6 +27,8 @@ const formHandler = async function (formData) {
     } catch (error) {
         // Present alert
         journalView.presentAlert(error.message);
+        // Update the view
+        journalView.updateUI(journal.getEntries());
     }
 };
 
