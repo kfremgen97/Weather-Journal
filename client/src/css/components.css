@@ -35,7 +35,7 @@
     width: 100%;
     padding: 1rem 2rem;
     border: .1rem solid var(--color-grey-dark);
-    border-radius: 2rem;
+    border-radius: 1rem;
     outline: none;
     transition: all .2s;
      /* set the grid position*/
@@ -74,7 +74,8 @@
     padding: 1rem 2rem;
     outline: none;
     border: none;
-    border-radius: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
     transition: all .2s;
 }
 
@@ -119,7 +120,7 @@
     add passing and a border radius*/
     background-color: var(--color-grey-light);
     padding: 2rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 
 .entry__item--primary {
