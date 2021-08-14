@@ -46,6 +46,32 @@ body {
     min-height: 100vh;
 }
 
+/****** Typography ******/
+
+.heading{
+    text-transform: uppercase;
+}
+
+.heading--1 {
+    font-size: 4rem;
+}
+
+.heading--2 {
+    font-size: 3rem;
+}
+
+.heading--3 {
+    font-size: 2rem;
+}
+
+.heading--primary {
+    color: var(--color-primary);
+}
+
+.heading--secondary {
+    color: var(--color-secondary);
+}
+
 /*********** Media quiries *********/
 
 /***** 900 breakpoint ******/
