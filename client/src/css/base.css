@@ -74,16 +74,6 @@ body {
 
 /*********** Media quiries *********/
 
-/***** 900 breakpoint ******/
-
-@media screen and (max-width: 56.25em) {
-
-    /*html*/
-    html {
-        font-size: 75%;
-    }
-    
-}
 
 /***** 600 breakpoint ****/
 
